@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/12 14:11:03 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/12 15:23:33 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@
 # include <string.h>
 # include <sys/wait.h>
 
-
+// Error codes
+#define ERROR_MESSAGE "Incorrect input. Please respect the following format: \"./fractol mandelbrot\" or \"./fractol julia <real> <imaginary>\".\n"
+int	exit_with_error(int n);
 
 
 #endif
