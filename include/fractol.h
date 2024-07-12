@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/12 15:23:33 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:40:37 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,21 @@
 # include <sys/wait.h>
 
 // Error codes
-#define ERROR_MESSAGE "Incorrect input. Please respect the following format: \"./fractol mandelbrot\" or \"./fractol julia <real> <imaginary>\".\n"
+#define ERROR_MESSAGE "Incorrect input. \nPlease respect the following format: \"./fractol mandelbrot\" or \"./fractol julia <real> <imaginary>\".\n"
+
+// Display
+#define HEIGHT 500
+#define WIDTH 500
+
 int	exit_with_error(int n);
 
+// structs
+
+typedef struct	t_fractol
+{
+		
+
+}	s_fractol;
 
 #endif
 
