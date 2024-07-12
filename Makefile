@@ -11,7 +11,9 @@ SRCS			:= $(addprefix $(SRC_DIR)/, $(SRCS))
 OBJ_DIR			:= .build
 OBJS			:= $(SRCS:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
-# --------------- Libraries ------------- #
+# --------------- Libraries and header files ------------- #
+
+INC_DIR				:= include
 
 MLX_DIR				:= MLX42
 LIBS_TARGET_MLX		:= $(MLX_DIR)/build/libmlx42.a
@@ -23,7 +25,7 @@ LIBS_ALL			:= $(LIBS_TARGET_MLX) $(LIB42_TARGET) -ldl -lglfw -pthread -lm
 
 # --------------- Flags --------------- #
 
-CFLAGS				:= -Wall -Wextra -Werror -g -Ofast
+CFLAGS				:= -Wall -Wextra -Werror -g -Ofast -I$(INC_DIR)
 ENSURE_BUILD_DIR	:= mkdir -p $(OBJ_DIR)
 RM					:= rm -rf
 
@@ -59,6 +61,8 @@ fclean: clean
 	$(MAKE) -C 42_lib fclean
 	$(RM) $(NAME)
 	@echo $(Dark_Pink) Thorough cleaning complete.. 💥 $(Color_Off)
+
+re: fclean all
 
 # ----------- Specific rules ---------- #
 
