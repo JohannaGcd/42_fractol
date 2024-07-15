@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 11:42:20 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 11:59:02 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <sys/wait.h>
+# include <stdint.h>
 
 // Error codes
 #define ERROR_MESSAGE "Incorrect input. \nPlease respect the following format: \"./fractol mandelbrot\" or \"./fractol julia <real> <imaginary>\".\n"
@@ -39,9 +40,9 @@ int	exit_with_error(int n);
 
 typedef struct	s_color
 {
-	double	red;
-	double	green;
-	double	blue;
+	uint32_t	red_color;
+	uint32_t	green_color;
+	uint32_t	blue_color;
 }	t_color;
 
 typedef struct	s_fractol

@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 14:47:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 10:49:15 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 12:01:52 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ void	display_error(void)
 	exit(EXIT_FAILURE);
 }
 
-void	fill_data(t_fractol *fractol)
+/*void	fill_data(t_fractol *fractol)
 {
 	fractol->color.red = 4;
-}
+}*/
 void	init_fractol(t_fractol	*fractol)
 {
 	fractol->mlx = mlx_init(WIDTH, HEIGHT, fractol->type, true);
@@ -40,5 +40,6 @@ void	init_fractol(t_fractol	*fractol)
 		display_error();
 	}
 	mlx_set_setting(MLX_STRETCH_IMAGE, true);
-	fill_data(fractol);
+	show_fractol(fractol);
+	//fill_data(fractol);
 }
