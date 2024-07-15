@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 17:47:54 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:52:45 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,13 @@
 // to determine its color based on whether it belongs to the fractal or not.
 int calculate_color_pixel(int x, int y, t_fractol *fractol)
 {
-	t_complex_plane 
+	t_complex_plane	 a;
+	t_complex_plane	 b;
+	int	i;
+
+	i = 0;
+	a.x = (scale)
+
 
 
 }
