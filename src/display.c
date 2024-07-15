@@ -6,27 +6,43 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 12:02:20 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:47:54 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
 #include "../include/fractol.h"
 
+// This function computes the number of iterations needed for each pixel
+// to determine its color based on whether it belongs to the fractal or not.
+int calculate_color_pixel(int x, int y, t_fractol *fractol)
+{
+	t_complex_plane 
+
+
+}
+
+// This function orchestrates the rendering of the entire fractal image pixel by pixel.
 void	show_fractol(t_fractol	*fractol)
 {
 	int	x;
 	int	y;
-	uint32_t red_color = 0xFF0000FF;
+	int	color_pixel;
 
-	y = -1;
-	while (++y < HEIGHT - 100)
+	y = 0;
+	while (y < HEIGHT)
 	{
-		x = -1;
-		while (++x < WIDTH)
+		x = 0;
+		while (x < WIDTH)
 		{
-			mlx_put_pixel(fractol->img, x, y, red_color);
+			color_pixel = calculate_color_pixel(x, y, fractol);
+			if (color_pixel < MAX_ITERATION)
+				mlx_put_pixel(fractol->img, x, y, fractol->color_palette[color_pixel % MAX_ITERATION]);
+			else
+			 	mlx_put_pixel(fractol->img, x, y, fractol->color_palette[0]);
+			x++;
 		}
+		y++;
 	}
 
 }

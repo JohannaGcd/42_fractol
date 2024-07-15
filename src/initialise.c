@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 14:47:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 16:46:39 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:11:29 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	display_error(void)
 void	fill_data(t_fractol *fractol)
 {
 	fractol->escape = 4;
-	fractol->iterations = MAXITERATIONS;
+	fractol->iterations = MAX_ITERATION;
 	fractol->position_x = 0;
 	fractol->position_y = 0;
 	fractol->zoom = 1;
