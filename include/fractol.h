@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/13 14:40:23 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 11:42:20 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,19 @@
 #define ERROR_MESSAGE "Incorrect input. \nPlease respect the following format: \"./fractol mandelbrot\" or \"./fractol julia <real> <imaginary>\".\n"
 
 // Display
-#define HEIGHT 500
-#define WIDTH 500
+#define HEIGHT 800
+#define WIDTH 800
 
 int	exit_with_error(int n);
 
 // structs
+
+typedef struct	s_color
+{
+	double	red;
+	double	green;
+	double	blue;
+}	t_color;
 
 typedef struct	s_fractol
 {
@@ -48,12 +55,11 @@ typedef struct	s_fractol
 	t_color		color;
 }	t_fractol;
 
-typedef struct	s_color
-{
-	double	red;
-	double	green;
-	double	blue;
-}	t_color;
+// initialize
+void	init_fractol(t_fractol	*fractol);
+
+// render image
+void	show_fractol(t_fractol	*fractol);
 
 #endif
 
