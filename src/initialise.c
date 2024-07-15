@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 14:47:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 12:01:52 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:46:39 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,20 @@ void	display_error(void)
 	exit(EXIT_FAILURE);
 }
 
-/*void	fill_data(t_fractol *fractol)
+// This function initialises fractal paramaters, setting default values for fractal computation.
+void	fill_data(t_fractol *fractol)
 {
-	fractol->color.red = 4;
-}*/
+	fractol->escape = 4;
+	fractol->iterations = MAXITERATIONS;
+	fractol->position_x = 0;
+	fractol->position_y = 0;
+	fractol->zoom = 1;
+	fractol->color.red_color = 4;
+	fractol->color.green_color = 3;
+	fractol->color.blue_color = 2; //TODO: try with different color
+}
+
+// This function initialises the MLX window, creating an image and setting event hooks.
 void	init_fractol(t_fractol	*fractol)
 {
 	fractol->mlx = mlx_init(WIDTH, HEIGHT, fractol->type, true);
@@ -41,5 +51,5 @@ void	init_fractol(t_fractol	*fractol)
 	}
 	mlx_set_setting(MLX_STRETCH_IMAGE, true);
 	show_fractol(fractol);
-	//fill_data(fractol);
+	fill_data(fractol);
 }
