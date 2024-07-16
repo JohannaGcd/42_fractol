@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 12:15:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 12:43:06 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 13:34:11 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 // This function adds two complex numbers,
 // combining the current value z with the constant c in the iteration process of the fractal.
-
 t_complex_plane	sum_complex(t_complex_plane z, t_complex_plane c)
 {
 	t_complex_plane sum;
@@ -35,7 +34,7 @@ t_complex_plane	square_complex(t_complex_plane z)
 	return (square);
 }
 
-// This function converts pixel coordinates to fractal coordinates on the complex plane.//TODO: DOUBLE check
+// This function converts pixel coordinates to fractal coordinates on the complex plane.
 double	scale_to_window(int value, double new_min_position, double new_max_position, int old_max_position)
 {
 	double scaled_value;

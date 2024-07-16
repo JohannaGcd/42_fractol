@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 14:47:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 17:11:29 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 13:36:25 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	fill_data(t_fractol *fractol)
 	fractol->color.red_color = 4;
 	fractol->color.green_color = 3;
 	fractol->color.blue_color = 2; //TODO: try with different color
+	init_colors(fractol);
 }
 
 // This function initialises the MLX window, creating an image and setting event hooks.

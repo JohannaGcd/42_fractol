@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:38:11 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 17:38:50 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 13:38:11 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	init_colors(t_fractol *fractol)
 	}
 }
 
-void	shift_color_palette(t_fractol	*fractol)
+void	shift_color_palette(t_fractol *fractol)
 {
 	fractol->color.red_color += 0.5; //TODO:Play around with values
 	fractol->color.green_color += 0.5;

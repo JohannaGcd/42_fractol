@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 12:46:36 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 13:37:59 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,6 +77,9 @@ t_complex_plane	sum_complex(t_complex_plane z, t_complex_plane c);
 t_complex_plane	square_complex(t_complex_plane z);
 double	scale_to_window(int value, double new_min_position, double new_max_position, int old_max_position);
 
+// colors
+void	init_colors(t_fractol *fractol);
+void	shift_color_palette(t_fractol *fractol);
 
 #endif
 
