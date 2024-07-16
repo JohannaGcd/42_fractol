@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:38:11 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 16:54:40 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 16:56:50 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,8 @@ void	init_colors(t_fractol *fractol)
 	}
 }
 
-// TODO: what does this funciton do?
+// This function changes the colors or the fractol 
+// It is linked to the handle_keyboard_hooks function so that when the user presses "space", colors change.
 void	shift_color_palette(t_fractol *fractol)
 {
 	fractol->color.red_color += 15;
