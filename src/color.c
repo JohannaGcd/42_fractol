@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:38:11 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 15:46:57 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 16:54:40 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,8 @@ void	init_colors(t_fractol *fractol)
 // TODO: what does this funciton do?
 void	shift_color_palette(t_fractol *fractol)
 {
-	fractol->color.red_color += 0.1;
-	fractol->color.green_color += 0.1;
-	fractol->color.blue_color += 0.1;
+	fractol->color.red_color += 15;
+	fractol->color.green_color += 15;
+	fractol->color.blue_color += 15;
 	init_colors(fractol);
 }
