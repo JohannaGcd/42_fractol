@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 14:47:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 13:36:25 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 16:32:51 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	init_fractol(t_fractol	*fractol)
 		display_error();
 	}
 	mlx_set_setting(MLX_STRETCH_IMAGE, true);
+	mlx_loop_hook(fractol->mlx, (void *)handle_keyboard_hooks, fractol);
 	show_fractol(fractol);
 	fill_data(fractol);
 }

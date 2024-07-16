@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 16:38:11 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 14:02:31 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 15:46:57 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 // This function sets up a color palette used to color the fractal based on the number of iterations.
 // A color is represented by a 32 bit integer, with various shades of red, green and blue.
 // The bit shifting operation ('<<') creates the final color by shifting each color component into ther respective positions in the integer.
-//
 void	init_colors(t_fractol *fractol)
 {
 	int		index;
