@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 17:47:24 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 12:46:36 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ typedef struct	s_complex_plane
 {
 	double	x;
 	double	y;
-}	t_complex_plane
+}	t_complex_plane;
 
 typedef struct	s_color
 {
@@ -69,6 +69,14 @@ void	init_fractol(t_fractol	*fractol);
 
 // render image
 void	show_fractol(t_fractol	*fractol);
+void	check_type_fractal(t_complex_plane *z, t_complex_plane *c, t_fractol *fractol);
+int		calculate_color_pixel(int x, int y, t_fractol *fractol);
+
+// math
+t_complex_plane	sum_complex(t_complex_plane z, t_complex_plane c);
+t_complex_plane	square_complex(t_complex_plane z);
+double	scale_to_window(int value, double new_min_position, double new_max_position, int old_max_position);
+
 
 #endif
 

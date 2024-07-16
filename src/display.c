@@ -6,26 +6,45 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/15 17:52:45 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/16 12:47:50 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../include/fractol.h"
 
-// This function computes the number of iterations needed for each pixel
-// to determine its color based on whether it belongs to the fractal or not.
-int calculate_color_pixel(int x, int y, t_fractol *fractol)
+// This function initializes z and c depending on the type of fractol.
+// For mandelbrot, z starts at 0.0 fir julia c is a fixed parameter.
+void	check_type_fractal(t_complex_plane *z, t_complex_plane *c, t_fractol *fractol)
 {
-	t_complex_plane	 a;
-	t_complex_plane	 b;
+	if (!fractol->type)
+		write(1, "test", 4);
+	c->x = z->x;
+	c->y = z->y;
+}
+
+// This function computes the number of iterations needed for each pixel.
+// This allows us to "map" the fractol on the screen
+// and to determine the color of each pixel based on whether it belongs to the fractal or not.
+// if an iteration of z never diverges (within the bounds of MAX_ITERATION), 
+// meaning the value of z stays below or equal to 2, its color is black.
+int	calculate_color_pixel(int x, int y, t_fractol *fractol)
+{
+	t_complex_plane	 z;
+	t_complex_plane	 c;
 	int	i;
 
 	i = 0;
-	a.x = (scale)
-
-
-
+	z.x = (scale_to_window(x, -2.0, 2.0, WIDTH) * fractol->zoom) + fractol->position_x;
+	z.y = (scale_to_window(y, 2.0, -2.0, HEIGHT) * fractol->zoom) + fractol->position_y;
+	check_type_fractal(&z, &c, fractol); 
+	while (i < fractol->iterations)
+	{
+		z = sum_complex(square_complex(z), c);
+		if ((z.x * z.x) + (z.y * z.y) > fractol->escape)
+			return (i);
+		i++;
+	}
+	return (MAX_ITERATION);
 }
 
 // This function orchestrates the rendering of the entire fractal image pixel by pixel.
