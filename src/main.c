@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 14:11:28 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 16:51:22 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:39:39 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,12 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-
 int	exit_with_error(int n)
 {
 	if (n == 1)
 		ft_putstr_fd(ERROR_MESSAGE, STDOUT_FILENO);
 	else if (n == 2)
-		ft_putstr_fd("Please provide numbers between -2 and 2.\n", STDOUT_FILENO);
+		ft_putstr_fd("Provide numbers between -2 and 2.\n", STDOUT_FILENO);
 	exit(EXIT_FAILURE);
 }
 

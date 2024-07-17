@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 17:27:44 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:46:54 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,16 @@
 
 // This function initializes z and c depending on the type of fractol.
 // For mandelbrot, z starts at 0.0 fir julia c is a fixed parameter.
-void	check_type_fractal(t_complex_plane *z, t_complex_plane *c, t_fractol *fractol)
+void	check_type_fractal(t_complex_plane *z,
+						t_complex_plane *c,
+						t_fractol *fractol)
 {
 	if (ft_strncmp(fractol->type, "julia", 6) == 0)
 	{
 		c->x = fractol->julia_x;
 		c->y = fractol->julia_y;
 	}
-	else 
+	else
 	{
 		c->x = z->x;
 		c->y = z->y;
@@ -30,19 +32,22 @@ void	check_type_fractal(t_complex_plane *z, t_complex_plane *c, t_fractol *fract
 
 // This function computes the number of iterations needed for each pixel.
 // This allows us to "map" the fractol on the screen
-// and to determine the color of each pixel based on whether it belongs to the fractal or not.
-// if an iteration of z never diverges (within the bounds of MAX_ITERATION), 
+// and to determine the color of each pixel,
+// depending on whether it belongs to the fractal or not.
+// if an iteration of z never diverges (within the bounds of MAX_ITERATION),
 // meaning the value of z stays below or equal to 2, its color is black.
 int	calculate_color_pixel(int x, int y, t_fractol *fractol)
 {
-	t_complex_plane	 z;
-	t_complex_plane	 c;
-	int	i;
+	t_complex_plane	z;
+	t_complex_plane	c;
+	int				i;
 
 	i = 0;
-	z.x = (scale_to_window(x, -2.0, 2.0, WIDTH) * fractol->zoom) + fractol->position_x;
-	z.y = (scale_to_window(y, 2.0, -2.0, HEIGHT) * fractol->zoom) + fractol->position_y;
-	check_type_fractal(&z, &c, fractol); 
+	z.x = (scale_to_window(x, -2.0, 2.0, WIDTH) * fractol->zoom)
+		+ fractol->position_x;
+	z.y = (scale_to_window(y, 2.0, -2.0, HEIGHT) * fractol->zoom)
+		+ fractol->position_y;
+	check_type_fractal(&z, &c, fractol);
 	while (i < fractol->iterations)
 	{
 		z = sum_complex(square_complex(z), c);
@@ -53,7 +58,7 @@ int	calculate_color_pixel(int x, int y, t_fractol *fractol)
 	return (MAX_ITERATION);
 }
 
-// This function orchestrates the rendering of the entire fractal image pixel by pixel.
+// This function orchestrates the rendering of the entire fractal.
 void	show_fractol(t_fractol	*fractol)
 {
 	int	x;
@@ -70,10 +75,9 @@ void	show_fractol(t_fractol	*fractol)
 			if (color_pixel < MAX_ITERATION)
 				mlx_put_pixel(fractol->img, x, y, fractol->color_palette[color_pixel % MAX_ITERATION]);
 			else
-			 	mlx_put_pixel(fractol->img, x, y, fractol->color_palette[0]);
+				mlx_put_pixel(fractol->img, x, y, fractol->color_palette[0]);
 			x++;
 		}
 		y++;
 	}
-
 }

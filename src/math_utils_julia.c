@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 16:43:59 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 16:57:58 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 18:05:18 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 // These functions are necessary to convert Julia arguments.
 
-// This function allows us to adjust the sign of the result if it's a negative value
+// This function allows us to adjust the sign of the result
+// (ie. if it's a negative value).
 int	check_sign(char c)
 {
 	if (c == '-')
@@ -28,7 +29,7 @@ double	atodouble_fractional(double temp_result, char *str, double sign)
 {
 	double	tenth;
 	double	final_result;
-	int	i;
+	int		i;
 
 	i = 0;
 	tenth = 1.0;
@@ -44,11 +45,13 @@ double	atodouble_fractional(double temp_result, char *str, double sign)
 	return (final_result);
 }
 
-// This function is like atoi, except it converts a string to a double.
-// If a decimal point is encountered, it delegates the conversion of the fractional part to atodouble_fractional.
+// This function is like atoi,
+// except it converts a string to a double.
+// If a decimal point is encountered,
+// it delegates the conversion of the fractional part to atodouble_fractional.
 double	atodouble(char *str)
 {
-	int	i;
+	int		i;
 	double	sign;
 	double	temp_result;
 	double	final_result;
@@ -73,4 +76,3 @@ double	atodouble(char *str)
 	final_result = atodouble_fractional(temp_result, &str[i], sign);
 	return (final_result);
 }
-
