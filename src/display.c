@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 17:46:54 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 18:07:49 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ void	show_fractol(t_fractol	*fractol)
 		{
 			color_pixel = calculate_color_pixel(x, y, fractol);
 			if (color_pixel < MAX_ITERATION)
-				mlx_put_pixel(fractol->img, x, y, fractol->color_palette[color_pixel % MAX_ITERATION]);
+				mlx_put_pixel(fractol->img, x, y,
+					fractol->color_palette[color_pixel % MAX_ITERATION]);
 			else
 				mlx_put_pixel(fractol->img, x, y, fractol->color_palette[0]);
 			x++;

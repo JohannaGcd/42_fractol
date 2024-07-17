@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 12:15:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 17:53:19 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 18:07:15 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ t_complex_plane	square_complex(t_complex_plane z)
 // This function converts pixel coordinates (on the screen)
 // to fractal coordinates on the complex plane.
 double	scale_to_window(int value,
-					   double new_min_position,
-					   double new_max_position,
-					   int old_max_position)
+					double new_min_position,
+					double new_max_position,
+					int old_max_position)
 {
 	double	scaled_value;
 	double	temp;
