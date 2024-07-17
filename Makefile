@@ -5,7 +5,7 @@ NAME			:= fractol
 # ----------- Source and object files ------------- #
 
 SRC_DIR			:= src
-SRCS			:= main.c display.c initialise.c color.c math.c keyboard.c
+SRCS			:= main.c display.c initialise.c color.c math.c hooks.c
 SRCS			:= $(addprefix $(SRC_DIR)/, $(SRCS))
 
 OBJ_DIR			:= .build

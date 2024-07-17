@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 17:05:36 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 14:13:40 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void	shift_color_palette(t_fractol *fractol);
 // handle events and hooks
 void	handle_keyboard_hooks(void	*input);
 int	close_window(void	*input);
+void	mouse_scroll_hook(double xdelta, double ydelta, void *parameter);
 
 #endif
 
