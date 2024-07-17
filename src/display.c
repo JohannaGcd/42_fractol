@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/15 10:21:58 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 12:47:50 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:27:44 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,16 @@
 // For mandelbrot, z starts at 0.0 fir julia c is a fixed parameter.
 void	check_type_fractal(t_complex_plane *z, t_complex_plane *c, t_fractol *fractol)
 {
-	if (!fractol->type)
-		write(1, "test", 4);
-	c->x = z->x;
-	c->y = z->y;
+	if (ft_strncmp(fractol->type, "julia", 6) == 0)
+	{
+		c->x = fractol->julia_x;
+		c->y = fractol->julia_y;
+	}
+	else 
+	{
+		c->x = z->x;
+		c->y = z->y;
+	}
 }
 
 // This function computes the number of iterations needed for each pixel.

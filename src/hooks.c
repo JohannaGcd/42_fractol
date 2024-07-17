@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:16:53 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 16:04:58 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 17:33:29 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,14 @@
 void	change_type_fractol(t_fractol *fractol, int value)
 {
 	if (value == 1)
-	{
 		fractol->type = "mandelbrot";
-		mlx_set_window_title(fractol->mlx, fractol->type);
-	}
-	/*else if (value == 2)
+	else if (value == 2)
 	{
 		fractol->type = "julia";
-		mlx_set_window_title(fractol->mlx, fractol->type);
-	}*/ //TODO: implement julia
+		fractol->julia_x = 0;
+		fractol->julia_y = 0.7;
+	}
+	mlx_set_window_title(fractol->mlx, fractol->type);
 }
 
 int	close_window(void	*input)
@@ -52,7 +51,7 @@ void	handle_keyboard_hooks(void	*input)
 		fractol->position_x += 0.1 * fractol->zoom;
 	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_1))
 		change_type_fractol(fractol, 1);
-	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_2)) //TODO:check if switch to julia works fractol->position_x -= 0.1;
+	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_2))
 		change_type_fractol(fractol, 2);
 	else if (mlx_is_key_down(fractol->mlx, MLX_KEY_KP_ADD))
 		shift_color_palette(fractol);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   math.c                                             :+:      :+:    :+:   */
+/*   math_utils.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 12:15:10 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/16 13:34:11 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/17 16:45:55 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,3 +44,4 @@ double	scale_to_window(int value, double new_min_position, double new_max_positi
 	scaled_value = temp / old_max_position + new_min_position;
 	return (scaled_value);
 }
+
