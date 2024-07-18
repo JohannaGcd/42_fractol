@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 14:11:28 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/18 11:21:31 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/18 14:20:30 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 	t_fractol	fractol;
 
 	if ((argc == 2 && ft_strncmp(argv[1], "mandelbrot", 11) == 0)
-		|| (argc == 2 && ft_strncmp(argv[1], "julia", 6) == 0))
+		|| (argc == 4 && ft_strncmp(argv[1], "julia", 6) == 0))
 	{
 		fractol.type = argv[1];
 		if (ft_strncmp(fractol.type, "julia", 6) == 0)

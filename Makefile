@@ -1,4 +1,4 @@
-# --------------- Makefile ------------ #
+#--------------- Makefile ------------ #
 
 NAME			:= fractol
 
@@ -25,7 +25,7 @@ LIBS_ALL			:= $(LIBS_TARGET_MLX) $(LIB42_TARGET) -ldl -lglfw -pthread -lm
 
 # --------------- Flags --------------- #
 
-CFLAGS				:= -Wall -Wextra -Werror -Ofast -I$(INC_DIR)
+CFLAGS				:= -Wall -Wextra -Werror -g -Ofast -I$(INC_DIR)
 ENSURE_BUILD_DIR	:= mkdir -p $(OBJ_DIR)
 RM					:= rm -rf
 
