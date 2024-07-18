@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 13:57:56 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 18:29:20 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/18 11:40:02 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,13 @@
 # define WIDTH 800
 # define MAX_ITERATION 50
 
-# define ERROR_MESSAGE "Incorrect input. \n" \
-                      "Please respect the following format: " \
-                      "\"./fractol mandelbrot\" or " \
-                      "\"./fractol julia <real> <imaginary>\".\n"
+# define ERROR_MESSAGE "Incorrect input. Please respect the correct format."
 
 # include "../42_lib/src/libft/libft.h"
 # include "../42_lib/src/get_next_line/get_next_line.h"
 # include "../42_lib/src/ft_printf/ft_printf.h"
 # include "../MLX42/include/MLX42/MLX42.h"
 # include <errno.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
 # include <sys/wait.h>
