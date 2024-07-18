@@ -6,7 +6,7 @@
 /*   By: jguacide <jguacide@student.codam.nl>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 15:16:53 by jguacide          #+#    #+#             */
-/*   Updated: 2024/07/17 17:33:29 by jguacide         ###   ########.fr       */
+/*   Updated: 2024/07/18 13:52:44 by jguacide         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	change_type_fractol(t_fractol *fractol, int value)
 	mlx_set_window_title(fractol->mlx, fractol->type);
 }
 
-int	close_window(void	*input)
+void	close_window(void	*input)
 {
 	t_fractol	*fractol;
 
