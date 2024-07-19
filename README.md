@@ -40,7 +40,5 @@ For Julia set, provide two additional parameters:
 * Press '+' to change colors. 
 * Press 1 and 2 to switch between fractal types. 
 * Press ESC to close the window and quit the program.
-
-
-![Screenshot from 2024-07-19 15-10-14](https://github.com/user-attachments/assets/e54ff045-affb-4ed5-9b8a-cd47782f8056)
-![Screenshot from 2024-07-19 15-13-08](https://github.com/user-attachments/assets/d0699782-f909-497f-bae3-11904e03d945)
+  
+<img src="https://github.com/user-attachments/assets/e54ff045-affb-4ed5-9b8a-cd47782f8056" width="400" alt="Screenshot from 2024-07-19 15-10-14"> <img src="https://github.com/user-attachments/assets/d0699782-f909-497f-bae3-11904e03d945" width="400" height="422.5" alt="Screenshot from 2024-07-19 15-13-08">
