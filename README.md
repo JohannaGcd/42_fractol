@@ -27,7 +27,7 @@ Press '+' to change colors.
 Press 1 and 2 to switch between fractal types. 
 Press ESC to close the window and quit the program.
 
-## Learnings
+## What I learned
 This was my first introduction to graphics programming. I learned:
 * How to leverage an external library to open a window and render an image,
 * The display of colors,
